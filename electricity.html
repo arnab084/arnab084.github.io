@@ -4,6 +4,9 @@
 <head>
 	<title>SK Telecom</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.print/1.6.0/jQuery.print.js"></script>
+	
 	<style>
 		body{
 			width: 100%;
@@ -31,6 +34,7 @@
 </head>
 
 <body>
+	<div id="printable">
 	<div><b>SK Telecom</b></div>
 	<div>520/141/G Ram Mohan Sarani</div>
 	<div>Baidyabati, Hooghly, Pin: 712222</div>
@@ -56,9 +60,14 @@
 	<div><br><br></div>
 	<div>______________</div>
 	<div>Signature </div>
-
-
+</div>
+<input type="button" value="Print" onclick="takeSnap()">
 
 </body>
+<script >
+	function takeSnap(){
+		$.print("#printable");
+	}
+</script>
 
 </html>
